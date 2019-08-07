@@ -24,14 +24,15 @@
 @import url(css/classy-nav.min.css);
 @import url(css/nice-select.min.css);
 /* :: 3.0 Base CSS */
+.widget-title {
+  margin-bottom: 50px;
+}
 * {
   margin: 0;
   padding: 0; }
-
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 14px; }
-
 h1,
 h2,
 h3,
@@ -495,6 +496,9 @@ textarea:focus {
     .single-welcome-slide .welcome-post img {
       -webkit-transition-duration: 600ms;
       transition-duration: 600ms; }
+      .single-welcome-slide .welcome-post trendingImg1 img {
+        height: 416px;
+       }
     .single-welcome-slide .welcome-post:hover img {
       -webkit-transform: scale(1.1);
       transform: scale(1.1); }
@@ -541,13 +545,18 @@ textarea:focus {
     .single-welcome-slide .welcome-post.style-2 .post-title {
       padding: 0 10px;
       font-size: 18px; }
+      .single-welcome-slide .welcome-post.style-2 img {
+        width: 370px;
+        height: 246.5px; }
+      .single-welcome-slide .welcome-post.smallImg img {
+        width: 370px;
+        height: 258px; }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .welcome-posts-- {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; } }
-
 /* :: 7.0 Blog Post Area */
 .single-blog-post {
   position: relative;
@@ -631,7 +640,12 @@ textarea:focus {
     min-width: 100%;
     width: 100%;
     margin-bottom: 50px; }
+    .single-blog-post.style-3 .post-thumb img {
+      max-width: 300px;
+      height: 200px;
+       }
   .single-blog-post.style-3 .post-data {
+    height: 200px;
     margin-left: 0;
     margin-bottom: 40px; }
     .single-blog-post.style-3 .post-data .post-catagory {
