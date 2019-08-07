@@ -21,10 +21,10 @@ $(document).ready(function () {
             for (var i = 0; i < listArticle.length; i++) {
                 content1 += "<div class=\"single-blog-post d-flex align-items-center mb-50\">\n" +
                     "                            <div class=\"post-thumb\">\n" +
-                    "                                <a href=\"#\"><img src=\""+listArticle[i].thumnail+"\" alt=\"\"></a>\n" +
+                    "                                <a href=\"single-post.html?id="+listArticle[i].id+"\"><img src=\""+listArticle[i].thumnail+"\" alt=\"\"></a>\n" +
                     "                            </div>\n" +
                     "                            <div class=\"post-data\">\n" +
-                    "                                <a href=\"../single-post.html?id=1565168461972\" class=\"post-title\">\n" +
+                    "                                <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">\n" +
                     "                                    <h6>"+listArticle[i].title+"</h6>\n" +
                     "                                </a>\n" +
                     "                                <div class=\"post-meta\">\n" +
@@ -42,7 +42,7 @@ $(document).ready(function () {
                             "    <img src=\""+listArticle[i].thumnail+"\" alt=\"\">" +
                             "    <div class=\"post-content\" data-animation=\"fadeInUp\" data-duration=\"500ms\">\n" +
                             "        <a href=\"#\" class=\"tag\">category</a>\n" +
-                            "        <a href=\"/api/v1/article?id=?\" class=\"post-title\">"+listArticle[i].title+"</a>\n" +
+                            "        <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">"+listArticle[i].title+"</a>\n" +
                             "        <p>"+getTimeHuman(listArticle[i].update_at)+"</p>\n" +
                             "    </div>\n"
                             "</div>"
@@ -54,7 +54,7 @@ $(document).ready(function () {
                             "    <img src=\""+listArticle[i].thumnail+"\" alt=\"\">" +
                             "    <div class=\"post-content\" data-animation=\"fadeInUp\" data-duration=\"500ms\">\n" +
                             "        <a href=\"#\" class=\"tag\">category</a>\n" +
-                            "        <a href=\"#\" class=\"post-title\">"+listArticle[i].title+"</a>\n" +
+                            "        <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">"+listArticle[i].title+"</a>\n" +
                             "        <p>"+getTimeHuman(listArticle[i].update_at)+"</p>\n" +
                             "    </div>\n"
                             "</div>"
@@ -240,33 +240,4 @@ function heroSlideCarouel() {
             }
         }
     });
-}
-
-
-function getTimeHuman(timestamp) {
-    var now = $.now();
-    var time = (now - timestamp)/1000;
-
-    if (time > (3600*24*30*12)) {
-        return parseInt(time/(3600*24*30*12))+" Years Ago";
-    }
-
-    if (time > (3600*24*30)) {
-        return parseInt(time/(3600*24*30))+" Months Ago";
-    }
-
-    if (time > (3600*24)) {
-        return parseInt(time/(3600*24))+" Days Ago";
-    }
-
-    if (time > (3600)) {
-        return parseInt(time/(3600))+" Hours ago";
-    }
-
-    if (time > (60)) {
-        return parseInt(time/(60))+" Minutes ago";
-    }
-
-    return "Just Now";
-    
 }
