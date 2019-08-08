@@ -36,7 +36,6 @@ $(document).ready(function () {
             $(".single-blog-post-details").html(content);
             generateRelatedArticle(END_POINT, categoryId);
             generateTrendingArticle(END_POINT);
-
         }
     });
 });
@@ -89,7 +88,7 @@ function generateTrendingArticle(END_POINT) {
 
             //Chèn dữ liệu vào html
             var trendingList = "";
-            for(var i = 0; i < 3; i ++){
+            for(var i = 0; i < 5; i ++){
                 trendingList += "<div class=\"single-blog-post style-4\">\n" +
                     "    <!-- Post Thumb -->\n" +
                     "    <div class=\"post-thumb\">\n" +

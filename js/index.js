@@ -66,7 +66,7 @@ $(document).ready(function () {
                             "   <img src=\""+listArticle[i].thumnail+"\"  alt=\"\">\n" +
                             "   <div class=\"post-content\" data-animation=\"fadeInUp\" data-delay=\"500ms\" data-duration=\"500ms\">\n" +
                             "       <a href=\"#\" class=\"tag tag-2\">Category</a>\n" +
-                            "       <a href=\"#\" class=\"post-title\">"+listArticle[i].title+"</a>\n" +
+                            "       <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">"+listArticle[i].title+"</a>\n" +
                             "        <p>"+getTimeHuman(listArticle[i].update_at)+"</p>\n" +
                             "   </div>\n" +
                             "</div>"
@@ -78,7 +78,7 @@ $(document).ready(function () {
                             "   <img class=\"small\" src=\""+listArticle[i].thumnail+"\"  alt=\"\">\n" +
                             "   <div class=\"post-content\" data-animation=\"fadeInUp\" data-delay=\"500ms\" data-duration=\"500ms\">\n" +
                             "       <a href=\"#\" class=\"tag tag-2\">Category</a>\n" +
-                            "       <a href=\"#\" class=\"post-title\">"+listArticle[i].title+"</a>\n" +
+                            "       <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">"+listArticle[i].title+"</a>\n" +
                             "        <p>"+getTimeHuman(listArticle[i].update_at)+"</p>\n" +
                             "   </div>\n" +
                             "</div>"
@@ -92,7 +92,7 @@ $(document).ready(function () {
                             "    </div>\n" +
                             "    <div class=\"post-data\">\n" +
                             "        <a href=\"#\" class=\"post-catagory\">Category</a>\n" +
-                            "        <a href=\"#\" class=\"post-title\">\n" +
+                            "        <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">\n" +
                             "            <h6>"+listArticle[i].title+"</h6>\n" +
                             "        </a>\n" +
                             "        <div class=\"post-meta\">\n"+
@@ -112,7 +112,7 @@ $(document).ready(function () {
                             "    </div>\n" +
                             "    <div class=\"post-data\">\n" +
                             "        <a href=\"#\" class=\"post-catagory\">Category</a>\n" +
-                            "        <a href=\"#\" class=\"post-title\">\n" +
+                            "        <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">\n" +
                             "            <h6>"+listArticle[i].title+"</h6>\n" +
                             "        </a>\n" +
                             "        <div class=\"post-meta\">\n"+
@@ -131,7 +131,7 @@ $(document).ready(function () {
                             "            <span class=\"serial-number\">01.</span>\n" +
                             "        </div>\n" +
                             "        <div class=\"post-data\">\n" +
-                            "            <a href=\"#\" class=\"post-title\">\n" +
+                            "            <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">\n" +
                             "                <h6>"+listArticle[i].title+"</h6>\n" +
                             "            </a>\n" +
                             "            <div class=\"post-meta\">\n" +
@@ -148,7 +148,7 @@ $(document).ready(function () {
                             "            <a href=\"#\"><img src=\""+listArticle[i].thumnail+"\" alt=\"\"></a>" +
                             "        </div>" +
                             "        <div class=\"post-data\">" +
-                            "            <a href=\"#\" class=\"post-title\">\n" +
+                            "            <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">\n" +
                             "                <h6>"+listArticle[i].title+"</h6>" +
                             "            </a>\n" +
                             "            <div class=\"post-meta\">\n"+
@@ -189,6 +189,8 @@ $(document).ready(function () {
         }
     });
 });
+
+
 
 function newSlideCarouel() {
     var newSlide = $("#bla-bla");

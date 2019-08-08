@@ -39,7 +39,7 @@ function generateMenuCategory(END_POINT) {
             var listCate = data.data;
             //Chèn dữ liệu vào html
             var content = "";
-            for(var i = 0; i < listCate.length; i ++){
+            for(var i = 0; i < 6; i ++){
                 content += "<li class=\"\"><a href=\"category.html?id="+listCate[i].id+"\">"+listCate[i].name+"</a></li>";
             }
             $("nav .classynav ul").html(content);
