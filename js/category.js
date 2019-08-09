@@ -12,6 +12,7 @@ function getDetailCate(END_POINT, categoryId) {
         success: function (data) {
             var cate = data.data;
             $(".viral-news-breadcumb-area h3").text(cate.name);
+            $(".viral-news-breadcumb-area h4").text(cate.description);
             $(".viral-news-breadcumb-area .breadcrumb li.active").text(cate.name);
 
         }
@@ -24,6 +25,7 @@ function getArticleByCategory(END_POINT, categoryId) {
         url: END_POINT + "/api/v1/article?category=" + categoryId,
         success: function (data) {
             var listArticle = data.data;
+            
             // sort random
             if (listArticle.length > 0) {
                 console.log(listArticle);
@@ -73,7 +75,7 @@ function getArticleByCategory(END_POINT, categoryId) {
                     "                            </div>\n" +
                     "                        </div>";
             }
-
+            
             $(".list-post").html(content2);
             //Chèn dữ liệu vào htm
         }

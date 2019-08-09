@@ -41,7 +41,7 @@ $(document).ready(function () {
                 content2 += "<div class=\"welcome-post trendingImg1\">\n" +
                             "    <img src=\""+listArticle[i].thumnail+"\" alt=\"\">" +
                             "    <div class=\"post-content\" data-animation=\"fadeInUp\" data-duration=\"500ms\">\n" +
-                            "        <a href=\"#\" class=\"tag\">category</a>\n" +
+                            "        <a href=\"#\" class=\"tag\">"+listArticle[i].category.name+"</a>\n" +
                             "        <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">"+listArticle[i].title+"</a>\n" +
                             "        <p>"+getTimeHuman(listArticle[i].update_at)+"</p>\n" +
                             "    </div>\n"
@@ -53,7 +53,7 @@ $(document).ready(function () {
                 content4 += "<div class=\"welcome-post trendingImg2\">\n" +
                             "    <img src=\""+listArticle[i].thumnail+"\" alt=\"\">" +
                             "    <div class=\"post-content\" data-animation=\"fadeInUp\" data-duration=\"500ms\">\n" +
-                            "        <a href=\"#\" class=\"tag\">category</a>\n" +
+                            "        <a href=\"#\" class=\"tag\">"+listArticle[i].category.name+"</a>\n" +
                             "        <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">"+listArticle[i].title+"</a>\n" +
                             "        <p>"+getTimeHuman(listArticle[i].update_at)+"</p>\n" +
                             "    </div>\n"
@@ -65,7 +65,7 @@ $(document).ready(function () {
                 content3 += "<div class=\"welcome-post style-2 Trending\">\n" +
                             "   <img src=\""+listArticle[i].thumnail+"\"  alt=\"\">\n" +
                             "   <div class=\"post-content\" data-animation=\"fadeInUp\" data-delay=\"500ms\" data-duration=\"500ms\">\n" +
-                            "       <a href=\"#\" class=\"tag tag-2\">Category</a>\n" +
+                            "       <p class=\"tag tag-2\">"+listArticle[i].category.name+"</p>\n" +
                             "       <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">"+listArticle[i].title+"</a>\n" +
                             "        <p>"+getTimeHuman(listArticle[i].update_at)+"</p>\n" +
                             "   </div>\n" +
@@ -77,7 +77,7 @@ $(document).ready(function () {
                 content5 += "<div class=\"welcome-post style-2 smallImg\">\n" +
                             "   <img class=\"small\" src=\""+listArticle[i].thumnail+"\"  alt=\"\">\n" +
                             "   <div class=\"post-content\" data-animation=\"fadeInUp\" data-delay=\"500ms\" data-duration=\"500ms\">\n" +
-                            "       <a href=\"#\" class=\"tag tag-2\">Category</a>\n" +
+                            "       <p class=\"tag tag-2\">"+listArticle[i].category.name+"</p>\n" +
                             "       <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">"+listArticle[i].title+"</a>\n" +
                             "        <p>"+getTimeHuman(listArticle[i].update_at)+"</p>\n" +
                             "   </div>\n" +
@@ -91,12 +91,12 @@ $(document).ready(function () {
                             "        <a href=\"#\"><img src=\""+listArticle[i].thumnail+"\" alt=\"\"></a>\n"+
                             "    </div>\n" +
                             "    <div class=\"post-data\">\n" +
-                            "        <a href=\"#\" class=\"post-catagory\">Category</a>\n" +
+                            "        <p class=\"post-catagory\">"+listArticle[i].category.name+"</p>\n" +
                             "        <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">\n" +
                             "            <h6>"+listArticle[i].title+"</h6>\n" +
                             "        </a>\n" +
                             "        <div class=\"post-meta\">\n"+
-                            "            <p class=\"post-author\">By <a href=\"#\">Author</a></p>\n"+
+                            "            <p class=\"post-author\">Theo: <a href=\"#\">"+listArticle[i].author.substring(0, 50)+"</a></p>\n"+
                             "            <p class=\"post-date\">"+getTimeHuman(listArticle[i].update_at)+"</p>\n"+
                             "        </div>\n" +
                             "    </div>\n" +
@@ -111,12 +111,12 @@ $(document).ready(function () {
                             "        <a href=\"#\"><img src=\""+listArticle[i].thumnail+"\" alt=\"\"></a>\n"+
                             "    </div>\n" +
                             "    <div class=\"post-data\">\n" +
-                            "        <a href=\"#\" class=\"post-catagory\">Category</a>\n" +
+                            "        <p class=\"post-catagory\">"+listArticle[i].category.name+"</p>\n" +
                             "        <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">\n" +
                             "            <h6>"+listArticle[i].title+"</h6>\n" +
                             "        </a>\n" +
                             "        <div class=\"post-meta\">\n"+
-                            "            <p class=\"post-author\">By <a href=\"#\">Author</a></p>\n"+
+                            "            <p class=\"post-author\">Theo:  <a href=\"#\">"+listArticle[i].author.substring(0, 50)+"</a></p>\n"+
                             "            <p class=\"post-date\">"+getTimeHuman(listArticle[i].update_at)+"</p>\n"+
                             "        </div>\n" +
                             "    </div>\n" +
@@ -124,18 +124,18 @@ $(document).ready(function () {
             }
             $(".allArticle2").html(allArticle2);
 
-            for(var i = 6; i < 10; i ++){
+            for(var i = 0; i < 4; i ++){
                 trendingList += "<div class=\"single-blog-post style-4\">\n" +
                             "        <div class=\"post-thumb\">\n" +
                             "            <a href=\"#\"><img src=\""+listArticle[i].thumnail+"\" alt=\"\"></a>\n" +
-                            "            <span class=\"serial-number\">01.</span>\n" +
+                            "            <span class=\"serial-number\">"+(i+1)+"</span>\n" +
                             "        </div>\n" +
                             "        <div class=\"post-data\">\n" +
                             "            <a href=\"single-post.html?id="+listArticle[i].id+"\" class=\"post-title\">\n" +
                             "                <h6>"+listArticle[i].title+"</h6>\n" +
                             "            </a>\n" +
                             "            <div class=\"post-meta\">\n" +
-                            "                <p class=\"post-author\">By <a href=\"#\">Author</a></p>\n" +
+                            "                <p class=\"post-author\">Theo: <a href=\"#\">"+listArticle[i].author.substring(0, 50)+"</a></p>\n" +
                             "            </div>\n" +
                             "        </div>\n" +
                             "    </div>"
