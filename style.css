@@ -24,6 +24,18 @@
 @import url(css/classy-nav.min.css);
 @import url(css/nice-select.min.css);
 /* :: 3.0 Base CSS */
+.single-welcome-slide .welcome-post .trendingImg1 {
+  height:493px;
+ }
+ .single-welcome-slide .welcome-post .trendingImg1 img{
+  height: 100%;
+ }
+.single-welcome-slide .welcome-post .trendingImg2 {
+  height:493px;
+ }
+ .single-welcome-slide .welcome-post .trendingImg2 img{
+  height: 100%;
+ }
 .viral-story-blog-post h3{
   margin-bottom: 50px;
 }
@@ -499,9 +511,7 @@ textarea:focus {
     .single-welcome-slide .welcome-post img {
       -webkit-transition-duration: 600ms;
       transition-duration: 600ms; }
-      .single-welcome-slide .welcome-post trendingImg1 img {
-        height: 416px;
-       }
+      
     .single-welcome-slide .welcome-post:hover img {
       -webkit-transform: scale(1.1);
       transform: scale(1.1); }
@@ -551,9 +561,6 @@ textarea:focus {
       .single-welcome-slide .welcome-post.style-2 img {
         width: 370px;
         height: 246.5px; }
-      .single-welcome-slide .welcome-post.smallImg img {
-        width: 370px;
-        height: 258px; }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .welcome-posts-- {
